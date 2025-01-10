@@ -9,9 +9,9 @@ import { AppService } from './app.service';
   imports: [
     ScheduleModule.forRoot(),
     MongooseModule.forRoot('mongodb://localhost:27017/crypto-tracker'),
-    CryptoModule, // Import the CryptoModule here
+    CryptoModule,
   ],
-  controllers: [AppController], // Add AppController here
-  providers: [AppService], // Add AppService here
+  controllers: [AppController],
+  providers: [AppService],
 })
 export class AppModule {}
