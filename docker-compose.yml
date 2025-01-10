@@ -1,4 +1,14 @@
 services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: crypto-tracker
+    ports:
+      - '3000:3000'
+    environment:
+      - MONGODB_URL=mongodb://mongo:27017/crypto-tracker
+
   mongo:
     image: mongo:latest
     container_name: mongo
